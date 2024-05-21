@@ -26,6 +26,7 @@ const signerKeypair = umi.eddsa.createKeypairFromSecretKey(signer.secretKey);
 const myKeypairSigner = createSignerFromKeypair(umi, signerKeypair);
 umi.use(keypairIdentity(myKeypairSigner));
 
+// const myNewTokenMint = generateSigner(umi)
 const mintSecretKey = new Uint8Array([
   232, 145, 78, 217, 187, 80, 253, 193, 173, 225, 113, 93, 195, 53, 246, 45,
   242, 196, 231, 169, 233, 37, 220, 94, 66, 242, 238, 28, 27, 242, 96, 1, 19,
@@ -69,6 +70,8 @@ async function main() {
   const result = await mintOurToken();
   const sig = base58.deserialize(result.signature);
   console.log({ sig });
+
+  //destination: 9831HW6Ljt8knNaN6r6JEzyiey939A2me3JsdMymmz5J
 }
 
 main()
