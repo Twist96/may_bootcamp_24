@@ -22,6 +22,7 @@ const umi = createUmi("https://api.devnet.solana.com")
   .use(web3JsRpc("https://api.devnet.solana.com"))
   .use(mplCandyMachine());
 
+//set payer/signer in umi
 const signerKeypair = umi.eddsa.createKeypairFromSecretKey(signer.secretKey);
 const myKeypairSigner = createSignerFromKeypair(umi, signerKeypair);
 umi.use(keypairIdentity(myKeypairSigner));
