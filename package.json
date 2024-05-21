@@ -1,0 +1,22 @@
+{
+  "name": "learn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "main": "npx ts-node main.ts",
+    "main:metaplex": "npx ts-node ./metaplex_functions/main.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@metaplex-foundation/mpl-candy-machine": "^6.0.1",
+    "@metaplex-foundation/mpl-token-metadata": "^3.2.1",
+    "@metaplex-foundation/umi": "^0.9.1",
+    "@metaplex-foundation/umi-bundle-defaults": "^0.9.1",
+    "@metaplex-foundation/umi-eddsa-web3js": "^0.9.1",
+    "@metaplex-foundation/umi-rpc-web3js": "^0.9.1",
+    "@solana/spl-token": "^0.4.6"
+  }
+}
